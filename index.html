@@ -4,13 +4,20 @@
 
 <head>
   <style>
-    
+    body {background-color: rgb(142, 158, 141)}
   </style>
 </head>
 
   <body>
     <custom-element> </custom-element>
 
-    <script> customElements.define('custom-element', class extends HTMLElement {connectedCallback() { this.innerHTML = "<h1> I am a Cool Java Element!</h1>";}});</script>
+    <script> customElements.define('custom-element', 
+                                   class extends HTMLElement {connectedCallback() {
+                                     this.style.display = 'block';
+                                     this.style.textAlign ='center';
+                                     this.innerHTML = "<h1> I am a Cool Java Element!</h1>";
+                                   }
+                                });
+    </script>
   </body>
 </html>
